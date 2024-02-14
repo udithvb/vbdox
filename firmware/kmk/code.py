@@ -67,15 +67,15 @@ keyboard.keymap = [
     #LAYER_TEMPLATE
     
        [
-        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,             XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+             XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
-        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,             XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
-        XXXX,XXXX,XXXX,XXXX,XXXX,                  XXXX,XXXX,XXXX,XXXX,XXXX,
-                  XXXX,XXXX,                       XXXX,XXXX,
-                  XXXX,XXXX,XXXX,                  XXXX,XXXX,XXXX,
-                            XXXX,                  XXXX
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,                  XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,                            XXXX,XXXX,XXXX,XXXX,XXXX,
+                                 XXXX,XXXX,        XXXX,XXXX,
+                            XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,
+                                      XXXX,        XXXX
         
         ],
     #NUMBER
@@ -87,7 +87,7 @@ keyboard.keymap = [
         XXXX,KC.GRV,KC.N1,KC.N2,KC.N3,KC.BSLS,             XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,                  XXXX,XXXX,XXXX,XXXX,XXXX,
                        XXXX,XXXX,                  XXXX,XXXX,
-                  KC.N0,XXXX,XXXX,                  XXXX,XXXX,XXXX,
+                  KC.N0,XXXX,XXXX,                 XXXX,XXXX,XXXX,
                             XXXX,                  XXXX
         
         ]
