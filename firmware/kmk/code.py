@@ -35,6 +35,9 @@ keyboard.modules.append(split)
 XXXX = KC.NO
 ____ = KC.TRNS
 
+
+
+
 keyboard.coord_mapping = [
          5,  1,  0,  2,  3,  4,       52, 51, 50, 48, 49, 53,
     13, 14,  9,  8, 10, 11, 12,       60, 59, 58, 56, 57, 62, 61,
@@ -61,7 +64,7 @@ keyboard.keymap = [
         XXXX,KC.LT(3, KC.Z, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.HT(KC.X, KC.RALT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.C, KC.HT(KC.D, KC.LSFT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.V,             KC.K, KC.HT(KC.H, KC.LSFT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.COMM, KC.HT(KC.DOT, KC.RALT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.LT(3, KC.SLSH, prefer_hold=True, tap_interrupted=False, tap_time=200), XXXX,
         XXXX,XXXX,XXXX,XXXX,KC.LT(6, KC.ESC, prefer_hold=True, tap_interrupted=False, tap_time=200),      KC.LT(9, KC.DEL, prefer_hold=True, tap_interrupted=False, tap_time=200),XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,      XXXX,XXXX,
-        KC.LT(3, KC.SPC, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.LT(5, KC.TAB, prefer_hold=True, tap_interrupted=False, tap_time=200),XXXX,                     XXXX,KC.LT(8, KC.ENT, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.LT(2, KC.BSPC, prefer_hold=True, tap_interrupted=False, tap_time=200),
+        KC.LT(3, KC.SPC, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.LT(5, KC.TAB, prefer_hold=True, tap_interrupted=False, tap_time=200),XXXX,                     XXXX,KC.LT(4, KC.ENT, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.LT(2, KC.BSPC, prefer_hold=True, tap_interrupted=False, tap_time=200),
         XXXX,                           XXXX,
         ],
     #LAYER_TEMPLATE
@@ -87,7 +90,7 @@ keyboard.keymap = [
         XXXX,KC.GRV,KC.N1,KC.N2,KC.N3,KC.BSLS,             XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,                  XXXX,XXXX,XXXX,XXXX,XXXX,
                        XXXX,XXXX,                  XXXX,XXXX,
-                  KC.N0,XXXX,XXXX,                 XXXX,XXXX,XXXX,
+                  KC.N0,KC.MINUS,XXXX,                 XXXX,XXXX,XXXX,
                             XXXX,                  XXXX
         
         ],
@@ -106,11 +109,26 @@ keyboard.keymap = [
                                       XXXX,        XXXX
         
         ],
+        #SYMBOL
+    
+       [
+             XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,KC.LCBR,KC.AMPR,KC.ASTR,KC.RPRN,KC.LCBR,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,KC.DQT,KC.DLR,KC.PERC,KC.CIRC,KC.PLUS,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,KC.TILD,KC.EXLM,KC.AT,KC.HASH,KC.PIPE,                  XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,KC.LPRN,                            XXXX,XXXX,XXXX,XXXX,XXXX,
+                                 XXXX,XXXX,        XXXX,XXXX,
+                            KC.RPRN,KC.UNDS,XXXX,        XXXX,XXXX,XXXX,
+                                      XXXX,        XXXX
+        
+        ],
+    
     
     ]
 
 layer_names_list = [
-"Base", "LayerTemplate", "Number","Nav",
+"Base", "LayerTemplate", "Number","Nav","Symbol",
 ]
 
 if __name__ == '__main__':
