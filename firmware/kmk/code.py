@@ -61,7 +61,7 @@ keyboard.keymap = [
         XXXX,KC.LT(3, KC.Z, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.HT(KC.X, KC.RALT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.C, KC.HT(KC.D, KC.LSFT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.V,             KC.K, KC.HT(KC.H, KC.LSFT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.COMM, KC.HT(KC.DOT, KC.RALT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.LT(3, KC.SLSH, prefer_hold=True, tap_interrupted=False, tap_time=200), XXXX,
         XXXX,XXXX,XXXX,XXXX,KC.LT(6, KC.ESC, prefer_hold=True, tap_interrupted=False, tap_time=200),      KC.LT(9, KC.DEL, prefer_hold=True, tap_interrupted=False, tap_time=200),XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,      XXXX,XXXX,
-        KC.LT(4, KC.SPC, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.LT(5, KC.TAB, prefer_hold=True, tap_interrupted=False, tap_time=200),XXXX,                     XXXX,KC.LT(8, KC.ENT, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.LT(2, KC.BSPC, prefer_hold=True, tap_interrupted=False, tap_time=200),
+        KC.LT(3, KC.SPC, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.LT(5, KC.TAB, prefer_hold=True, tap_interrupted=False, tap_time=200),XXXX,                     XXXX,KC.LT(8, KC.ENT, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.LT(2, KC.BSPC, prefer_hold=True, tap_interrupted=False, tap_time=200),
         XXXX,                           XXXX,
         ],
     #LAYER_TEMPLATE
@@ -90,12 +90,27 @@ keyboard.keymap = [
                   KC.N0,XXXX,XXXX,                 XXXX,XXXX,XXXX,
                             XXXX,                  XXXX
         
-        ]
+        ],
+       
+       #NAV
+    
+       [
+             XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,KC.LEFT,KC.DOWN,KC.UP,KC.RIGHT,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,                  XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,                            XXXX,XXXX,XXXX,XXXX,XXXX,
+                                 XXXX,XXXX,        XXXX,XXXX,
+                            XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,
+                                      XXXX,        XXXX
+        
+        ],
     
     ]
 
 layer_names_list = [
-"Base", "LayerTemplate", "Number",
+"Base", "LayerTemplate", "Number","Nav",
 ]
 
 if __name__ == '__main__':
