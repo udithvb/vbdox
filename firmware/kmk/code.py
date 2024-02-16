@@ -36,7 +36,7 @@ XXXX = KC.NO
 ____ = KC.TRNS
 
 
-
+tap_time = 150
 
 keyboard.coord_mapping = [
          5,  1,  0,  2,  3,  4,       52, 51, 50, 48, 49, 53,
@@ -60,11 +60,11 @@ keyboard.keymap = [
                   KC.F1,  KC.F2,  KC.F3,  KC.F4,  KC.F5, KC.F6,             KC.F7, KC.F8, KC.F9, KC.F10, KC.F11, KC.F12,
         KC.TILDE,   KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,  KC.N6,      KC.N7, KC.N8, KC.N9, KC.N0, KC.MINUS, KC.EQUAL, KC.BSPACE,
         XXXX,KC.Q, KC.W, KC.F, KC.P, KC.B,XXXX,                             XXXX, KC.J, KC.L, KC.U, KC.Y, KC.SCLN, XXXX,
-        XXXX,KC.HT(KC.A, KC.LGUI, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.HT(KC.R, KC.LGUI, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.HT(KC.S, KC.LALT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.HT(KC.T, KC.LCTL, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.G, XXXX,                             XXXX,KC.M, KC.HT(KC.N, KC.LCTL, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.HT(KC.E, KC.LALT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.HT(KC.I, KC.LGUI, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.HT(KC.O, KC.LGUI, prefer_hold=False, tap_interrupted=True, tap_time=200),XXXX,
-        XXXX,KC.LT(3, KC.Z, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.HT(KC.X, KC.RALT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.C, KC.HT(KC.D, KC.LSFT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.V,             KC.K, KC.HT(KC.H, KC.LSFT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.COMM, KC.HT(KC.DOT, KC.RALT, prefer_hold=False, tap_interrupted=True, tap_time=200), KC.LT(3, KC.SLSH, prefer_hold=True, tap_interrupted=False, tap_time=200), XXXX,
-        XXXX,XXXX,XXXX,XXXX,KC.LT(6, KC.ESC, prefer_hold=True, tap_interrupted=False, tap_time=200),      KC.LT(9, KC.DEL, prefer_hold=True, tap_interrupted=False, tap_time=200),XXXX,XXXX,XXXX,XXXX,
+        XXXX,KC.HT(KC.A, KC.LGUI, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.HT(KC.R, KC.LGUI, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.HT(KC.S, KC.LALT, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.HT(KC.T, KC.LCTL, prefer_hold=False, tap_interrupted=True, tap_time = tap_time), KC.G, XXXX,                             XXXX,KC.M, KC.HT(KC.N, KC.LCTL, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.HT(KC.E, KC.LALT, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.HT(KC.I, KC.LGUI, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.HT(KC.O, KC.LGUI, prefer_hold=False, tap_interrupted=True, tap_time=tap_time),XXXX,
+        XXXX,KC.LT(3, KC.Z, prefer_hold=True, tap_interrupted=False, tap_time=tap_time), KC.HT(KC.X, KC.RALT, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.C, KC.HT(KC.D, KC.LSFT, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.V,             KC.K, KC.HT(KC.H, KC.LSFT, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.COMM, KC.HT(KC.DOT, KC.RALT, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.LT(3, KC.SLSH, prefer_hold=True, tap_interrupted=False, tap_time=tap_time), XXXX,
+        XXXX,XXXX,XXXX,XXXX,KC.LT(6, KC.ESC, prefer_hold=True, tap_interrupted=False, tap_time=tap_time),      KC.LT(9, KC.DEL, prefer_hold=True, tap_interrupted=False, tap_time=tap_time),XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,      XXXX,XXXX,
-        KC.LT(3, KC.SPC, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.LT(5, KC.TAB, prefer_hold=True, tap_interrupted=False, tap_time=200),XXXX,                     XXXX,KC.LT(4, KC.ENT, prefer_hold=True, tap_interrupted=False, tap_time=200), KC.LT(2, KC.BSPC, prefer_hold=True, tap_interrupted=False, tap_time=200),
+        KC.LT(3, KC.SPC, prefer_hold=True, tap_interrupted=False, tap_time=tap_time), KC.LT(5, KC.TAB, prefer_hold=True, tap_interrupted=False, tap_time=tap_time),XXXX,                     XXXX,KC.LT(4, KC.ENT, prefer_hold=True, tap_interrupted=False, tap_time=tap_time), KC.LT(2, KC.BSPC, prefer_hold=True, tap_interrupted=False, tap_time=tap_time),
         XXXX,                           XXXX,
         ],
     #LAYER_TEMPLATE
