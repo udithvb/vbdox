@@ -123,12 +123,27 @@ keyboard.keymap = [
                                       XXXX,        XXXX
         
         ],
+     #LAYER_TEMPLATE
+    
+       [
+             XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,                  XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,                            XXXX,XXXX,XXXX,XXXX,XXXX,
+                                 XXXX,XXXX,        XXXX,XXXX,
+                            XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,
+                                      XXXX,        XXXX
+        
+        ],
+
     
     
     ]
 
 layer_names_list = [
-"Base", "LayerTemplate", "Number","Nav","Symbol",
+"Base", "LayerTemplate", "Number","Nav","Symbol","Mouse",
 ]
 
 if __name__ == '__main__':
