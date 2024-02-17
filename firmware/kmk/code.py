@@ -123,22 +123,22 @@ keyboard.keymap = [
                                       XXXX,        XXXX
         
         ],
-     #LAYER_TEMPLATE
+     #MOUSE
     
        [
              XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
-        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
-        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,                  XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,KC.MS_LT,KC.MS_DN,KC.MS_UP,KC.MS_RT,XXXX,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,                  KC.MW_LT,KC.MW_DN,KC.MW_UP,KC.MW_RT,XXXX1,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,                            XXXX,XXXX,XXXX,XXXX,XXXX,
                                  XXXX,XXXX,        XXXX,XXXX,
-                            XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,
+                            XXXX,XXXX,XXXX,        KC.MB_RMB,KC.MB_LMB,KC.MB_MMB,
                                       XXXX,        XXXX
         
         ],
 
-    
+  
     
     ]
 
