@@ -30,7 +30,7 @@ bootcfg(
     source=board.GP0,
     midi=False,
     mouse=True,
-    pan=True,
+    pan=False,
     storage=False,
     usb_id=('VBinc.', 'sakydox'),
 )

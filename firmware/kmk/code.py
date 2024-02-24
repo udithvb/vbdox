@@ -65,7 +65,7 @@ keyboard.keymap = [
         XXXX,XXXX,XXXX,XXXX,KC.LT(6, KC.ESC, prefer_hold=True, tap_interrupted=False, tap_time=tap_time),      KC.LT(9, KC.DEL, prefer_hold=True, tap_interrupted=False, tap_time=tap_time),XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,      XXXX,XXXX,
         KC.LT(3, KC.SPC, prefer_hold=True, tap_interrupted=False, tap_time=tap_time), KC.LT(5, KC.TAB, prefer_hold=True, tap_interrupted=False, tap_time=tap_time),XXXX,                     XXXX,KC.LT(4, KC.ENT, prefer_hold=True, tap_interrupted=False, tap_time=tap_time), KC.LT(2, KC.BSPC, prefer_hold=True, tap_interrupted=False, tap_time=tap_time),
-        XXXX,                           XXXX,
+        KC.TD(KC.NO, KC.DF(), tap_time=200),                           XXXX,
         ],
     #LAYER_TEMPLATE
     
@@ -130,7 +130,7 @@ keyboard.keymap = [
         XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,KC.MS_LT,KC.MS_DN,KC.MS_UP,KC.MS_RT,XXXX,XXXX,
-        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,                  KC.MW_LT,KC.MW_DN,KC.MW_UP,KC.MW_RT,XXXX1,XXXX,
+        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,                  KC.MW_LT,KC.MW_DN,KC.MW_UP,KC.MW_RT,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,                            XXXX,XXXX,XXXX,XXXX,XXXX,
                                  XXXX,XXXX,        XXXX,XXXX,
                             XXXX,XXXX,XXXX,        KC.MB_RMB,KC.MB_LMB,KC.MB_MMB,
