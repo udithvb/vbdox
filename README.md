@@ -4,3 +4,6 @@ Ergodox clone from scratch.
 
 hardware folder has pcb gerber files.
 firmware has kmk config for miryoku like layout. 
+
+
+![WhatsApp Image 2024-07-17 at 08 57 51](https://github.com/user-attachments/assets/803091bb-ce21-4e3a-ab89-84873e01aeb0)
