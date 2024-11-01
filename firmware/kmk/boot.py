@@ -32,5 +32,5 @@ bootcfg(
     mouse=True,
     pan=False,
     storage=False,
-    usb_id=('VBinc.', 'sakydox'),
+    usb_id=('VBinc.', 'vbdox'),
 )
