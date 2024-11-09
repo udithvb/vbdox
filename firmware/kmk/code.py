@@ -10,6 +10,15 @@ from kmk.modules.split import Split, SplitType, SplitSide
 
 keyboard = KMKKeyboard()
 
+keyboard.col_pins = (board.GP0,board.GP1,board.GP2,board.GP3,board.GP4,board.GP5,board.GP6,board.GP7)
+keyboard.row_pins = (board.GP29,board.GP28,board.GP27,board.GP26,board.GP15,board.GP14)
+
+keyboard.diode_orientation = DiodeOrientation.ROW2COL
+keyboard.debug_enabled = False
+keyboard.tap_time = True
+
+
+
 from kmk.modules.layers import Layers; keyboard.modules.append(Layers())
 from kmk.modules.holdtap import HoldTap; keyboard.modules.append(HoldTap())
 from kmk.modules.mouse_keys import MouseKeys; keyboard.modules.append(MouseKeys())
@@ -21,12 +30,10 @@ from kmk.modules.capsword import CapsWord; keyboard.modules.append(CapsWord())
 
 
 
-keyboard.col_pins = (board.GP0,board.GP1,board.GP2,board.GP3,board.GP4,board.GP5,board.GP6,board.GP7)
-keyboard.row_pins = (board.GP29,board.GP28,board.GP27,board.GP26,board.GP15,board.GP14)
+from kmk.handlers.sequences import simple_key_sequence, send_string   # depricated TODO: use macros
+# https://github.com/KMKfw/kmk_firmware/blob/main/docs/en/macros.md
+# from kmk.modules.macros import Macros;  keyboard.modules.append(Macros())
 
-keyboard.diode_orientation = DiodeOrientation.ROW2COL
-keyboard.debug_enabled = True
-keyboard.tap_time = True
 
 
 split = Split(data_pin=board.GP11, data_pin2=board.GP12, use_pio=True, uart_flip = True)
@@ -37,6 +44,49 @@ ____ = KC.TRNS
 
 
 tap_time = 150
+
+
+TMUX_TAB  = simple_key_sequence((
+         KC.LCTL(KC.A),
+         KC.TAB,
+))
+
+
+TMUX_LW  = simple_key_sequence((
+         KC.LCTL(KC.A),
+         KC.SCOLON,
+))
+
+
+TMUX_ZM  = simple_key_sequence((
+         KC.LCTL(KC.A),
+         KC.Z,
+))
+
+TMUX = KC.TD(
+    TMUX_TAB,
+    KC.HT(TMUX_LW,TMUX_ZM,prefer_hold=False),
+    XXXX
+)
+
+
+I3 = KC.TD(
+    KC.LALT(KC.TAB),
+    KC.HT(KC.LALT(KC.TAB),KC.LALT(KC.LSFT(KC.TAB)),prefer_hold=False),
+    XXXX,
+    XXXX
+)
+
+PASS_STR = send_string("pass")
+
+
+PASS = KC.TD(
+    KC.F3,
+    XXXX,
+    KC.HT(XXXX,PASS_STR,prefer_hold=False),
+    XXXX
+)
+
 
 keyboard.coord_mapping = [
          5,  1,  0,  2,  3,  4,       52, 51, 50, 48, 49, 53,
@@ -56,11 +106,10 @@ keyboard.coord_mapping = [
 
 keyboard.keymap = [
     
-    
     #BASE
     [
-                  KC.F1,  KC.F2,  KC.F3,  KC.F4,  KC.F5, KC.F6,             KC.F7, KC.F8, KC.F9, KC.F10, KC.F11, KC.F12,
-        KC.TILDE,   KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,  KC.N6,      KC.N7, KC.N8, KC.N9, KC.N0, KC.MINUS, KC.EQUAL, KC.BSPACE,
+                  XXXX,  KC.F2,  PASS,  KC.F4,  KC.F5, KC.F6,             KC.F7, KC.F8, KC.F9, KC.F10, KC.F11, KC.F12,
+        I3,   KC.LALT(KC.N1),   KC.LALT(KC.N2),   KC.LALT(KC.N3),   KC.LALT(KC.N4),   KC.LALT(KC.N5),  KC.LALT(KC.N6),      KC.LALT(KC.N7), KC.LALT(KC.N8), KC.LALT(KC.N9), KC.LALT(KC.N0), KC.MINUS, KC.EQUAL, TMUX,
         XXXX,KC.Q, KC.W, KC.F, KC.P, KC.B,XXXX,                             XXXX, KC.J, KC.L, KC.U, KC.Y, KC.SCLN, XXXX,
         XXXX,KC.HT(KC.A, KC.LGUI, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.HT(KC.R, KC.LGUI, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.HT(KC.S, KC.LALT, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.HT(KC.T, KC.LCTL, prefer_hold=False, tap_interrupted=True, tap_time = tap_time), KC.G, XXXX,                             XXXX,KC.M, KC.HT(KC.N, KC.LCTL, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.HT(KC.E, KC.LALT, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.HT(KC.I, KC.LGUI, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.HT(KC.O, KC.LGUI, prefer_hold=False, tap_interrupted=True, tap_time=tap_time),XXXX,
         XXXX,KC.LT(3, KC.Z, prefer_hold=True, tap_interrupted=False, tap_time=tap_time), KC.HT(KC.X, KC.RALT, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.C, KC.HT(KC.D, KC.LSFT, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.V,             KC.K, KC.HT(KC.H, KC.LSFT, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.COMM, KC.HT(KC.DOT, KC.RALT, prefer_hold=False, tap_interrupted=True, tap_time=tap_time), KC.LT(3, KC.SLSH, prefer_hold=True, tap_interrupted=False, tap_time=tap_time), XXXX,
@@ -73,7 +122,7 @@ keyboard.keymap = [
     
        [
              XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
-        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+        ____,KC.LALT(KC.N1),KC.LALT(KC.N2),XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
         XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,                  XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
@@ -83,6 +132,18 @@ keyboard.keymap = [
                                       XXXX,        XXXX
         
         ],
+#       [
+#             XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+#        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+#        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+#        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+#        XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,                  XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
+#        XXXX,XXXX,XXXX,XXXX,XXXX,                            XXXX,XXXX,XXXX,XXXX,XXXX,
+#                                 XXXX,XXXX,        XXXX,XXXX,
+#                            XXXX,XXXX,XXXX,        XXXX,XXXX,XXXX,
+#                                      XXXX,        XXXX
+#        
+#        ],
     #NUMBER
     [
         XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,     XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,
@@ -150,3 +211,4 @@ layer_names_list = [
 
 if __name__ == '__main__':
     keyboard.go()
+# # 
